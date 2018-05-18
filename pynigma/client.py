@@ -31,8 +31,8 @@ _data_type_codec = {
 
 
 def _map_metadata_data_type(metadata_columns):
-    '''Return the column data from the MetaData endpoint with corresponding 
-    Python data types included. Even though this is used in only one place, it 
+    '''Return the column data from the MetaData endpoint with corresponding
+    Python data types included. Even though this is used in only one place, it
     has been separated out to facilitate testing.
     '''
     for column in metadata_columns:
@@ -51,7 +51,7 @@ class EnigmaAPI(object):
     ---------
     client_key      : a string corresponding to a valid API key
 
-    EXAMPLE 
+    EXAMPLE
     -------
     >>> from pynigma import client
     >>> import os
@@ -113,22 +113,7 @@ class EnigmaAPI(object):
             return res.json()
 
     def get_data(self, datapath, **kwargs):
-        '''Returns an HTTP response from the data endpoint as decoded JSON.
-
-        ARGUMENTS
-        ---------
-        datapath            : a string corresponding to the dataset requested
-        **kwargs            : a dictionary of keyword arguments corresponding
-                              to the provided query parameters and values
-
-        EXAMPLE
-        -------
-        >>> data = api.get_data(datapath='us.gov.whitehouse.salaries.2011')
-        >>> data['result'][0]  # the first salary in the dataset
-        {u'status': u'Employee', u'salary': u'70000.00',
-        u'name': u'Abrams, Adam W. ', u'pay_basis': u'Per Annum',
-        u'position_title': u'REGIONAL COMMUNICATIONS DIRECTOR', u'serialid': 1}
-        '''
+        '''This is a doc edit'''
         return self._request(resource='data', datapath=datapath, **kwargs)
 
     def get_metadata(self, datapath, **kwargs):

@@ -16,11 +16,13 @@ class TestClient(unittest.TestCase):
         del self.new_client
 
     def test_check_query_params_valid_param(self):
+        '''This is a test doc edit.'''
         self.assertTrue(
             self.new_client._check_query_params(
                 resource='data', **{'search': ''}))
 
     def test_check_query_params_valid_params(self):
+        '''Does _check_query_params() return True for valid parameters?'''
         print "This is a test code edit."
 
     def test_check_query_params_invalid_param(self):
